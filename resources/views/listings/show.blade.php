@@ -7,7 +7,7 @@
 <div class="mx-4">
     <x-card class="bg-gray-50 border border-gray-200 p-10 rounded">
         <div class="flex flex-col items-center justify-center text-center">
-            <img class="w-48 mr-6 mb-6" src="{{asset('images/acme.png')}}" alt="" />
+            <img class="w-48 mr-6 mb-6" src="{{$listing->logo ? asset('storage/' .$listing->logo): asset('/images/no-image.png')}}" alt="" />
 
             <h3 class="text-2xl mb-2">{{$listing->title}}</h3>
             <div class="text-xl font-bold mb-4">{{$listing->company}}</div>
@@ -37,6 +37,7 @@
             </div>
         </div>
     </x-card>
+
 </div>
 
 @endsection
